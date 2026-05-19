@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  background: #FAF7F2;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @apply bg-paper font-body text-slate-900 antialiased;
+}
+
+::selection {
+  background: rgba(201, 42, 58, 0.18);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  section {
+    scroll-margin-top: 92px;
+    scroll-snap-align: start;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-balance;
+  }
+
+  a, button, input, textarea, select {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
